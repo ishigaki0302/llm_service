@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service LLMService {
+  rpc Infer (InferRequest) returns (InferResponse) {}
+}
+
+message InferRequest {
+  string input_text = 1;
+}
+
+message InferResponse {
+  string output_text = 1;
+}
